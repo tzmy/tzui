@@ -1,12 +1,13 @@
 import React from 'react';
+import style from './css/tzui.module.css';
 
-
-class TZinputText extends React.Component{
+class TZinput extends React.Component{
     
     render(){
         return(
-            <input type={this.props.type} />
+            
+            <input type={this.props.type} className={style.TZinputText} />
         )
     }
 }
-export default TZinputText;
+export default TZinput;

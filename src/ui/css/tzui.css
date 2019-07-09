@@ -35,6 +35,56 @@
     color: #096dd9;
     border-color: #096dd9;
 }
+.checkboxlabel{
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    height: 16px;
+    display: inline-block;
+}
+.TZcheckbox{
+    visibility: hidden;
+    position: absolute;    
+    vertical-align: top;
+}
+.checkboxInner{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    background: none;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    vertical-align: top;
+    border-radius: 2px;
+}
+.TZcheckbox:checked + .checkboxInner{
+    background: #1890ff;
+    border-color: #1890ff;
+}
+.TZcheckbox:checked + .checkboxInner:after{
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    content: '';
+    background: none;
+    border: 2px solid white;
+    transform: rotate(45deg);
+    border-top: none; 
+    border-left: none; 
+}
+.innertext{
+    color: rgba(0,0,0,0.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    vertical-align: top;
+    height: 16px;
+    line-height: 16px;
+}
+
 .primary{
     color: #ffffff;
     background: #1890ff;

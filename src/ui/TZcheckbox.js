@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/tzui.css';
-class TZbutton extends React.Component{
+class TZcheckbox extends React.Component{
     constructor(props) {
         super(props);
         this.linkFlag= this.props.type=='link'?true:false;
@@ -8,7 +8,7 @@ class TZbutton extends React.Component{
     }
     handleClick =()=>{
         if(this.linkFlag){
-           window.open(this.props.href);
+           
         }else{
             if(this.props.onClick){
                 this.props.onClick();
@@ -16,12 +16,17 @@ class TZbutton extends React.Component{
         }
     }
     render(){
-        var type =' TZbutton '+this.props.type;
+        var type =' checkboxInner ';
         var disabled = this.props.disabled?'disabled':'';
         return(
-            <button className={type} disabled={disabled} href={this.props.href} onClick={this.handleClick}>{this.props.children} </button>
+            <label className='checkboxlabel'>
+                <input type="checkbox"  className='TZcheckbox' disabled={disabled} 
+                onClick={this.handleClick} value = {this.props.children} name={this.props.name} />
+                <span className={type}></span>
+                <span className='innertext'>{this.props.children}</span>
+            </label>
         )
         
     }
 }
-export default TZbutton ;
+export default TZcheckbox ;

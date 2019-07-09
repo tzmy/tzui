@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*模拟select下拉列表实现样式部分*/
+.selShow {
+    position: relative;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    color: #4c5161;
+    padding: 0 10px; 
+
+    border: 2px solid #d0d0d5;
+    border-radius: 4px;
+
+    background: #fff ;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.selShow:hover{
+    border: 2px solid #2486ff;
+}
+.selWrap {
+    position: relative; 
+    padding-right: 12px;
+}
+.selShow::after {
+    content: '\271A';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.select {
+    position: absolute;
+    left: -2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    margin-top: 5px;
+    border: 2px solid #2486ff;
+    border-radius: 4px;
+    border-bottom: none;
+
+    background-color: #fff;
+    
+
+    visibility: hidden;
+
+    transform: scale(0);
+    transition: .3s;
+    transform-origin: top;
+    z-index: 9;
+}
+.select li {
+    height: 25px;
+    list-style: none;
+    padding:0 12px;
+    border-bottom: 2px solid #2486ff;
+    white-space: nowrap;
+    position: relative;
+}
+.select li:hover {
+    color: #912B32;
+    background-color: #2486ff;
+}
+
+.select li:hover:before {
+    content: '' '\2605';
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.select[open]{
+    visibility: visible;
+    transform: scale(1);
+}
+
+.TZinputText{
+    
+}
+
+.TZinputText:hover{
+    border: 2px solid #2486ff;
+}
+
+.TZcascader{
+    position: relative;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    color: #4c5161;
+    padding: 0 10px; 
+    border: 2px solid #d0d0d5;
+    border-radius: 4px;
+    background: #fff ;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.TZcascaderWrap{
+    
+}
+.TZcascaderWrap::after {
+    content: '\271A';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
